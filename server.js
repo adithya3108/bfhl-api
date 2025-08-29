@@ -12,12 +12,11 @@ app.use(cors());
 app.use(morgan('combined'));
 app.use(express.json({ limit: '10mb' }));
 
-// Your personal details - UPDATE THESE WITH YOUR INFORMATION
-const USER_DETAILS = {
-    full_name: "p.r.adithya", // Replace with your name in lowercase (use underscore for spaces)
-    date_of_birth: "31082004", // Replace with your DOB in ddmmyyyy format
-    email: "adithya.pr2022@vitstudent.ac.in", // Replace with your email
-    roll_number: "22brs1100" // Replace with your roll number
+ const USER_DETAILS = {
+    full_name: "p.r.adithya", 
+    date_of_birth: "31082004", 
+    email: "adithya.pr2022@vitstudent.ac.in",  
+    roll_number: "22brs1100"  
 };
 
 
@@ -43,16 +42,13 @@ function processData(data) {
                 oddNumbers.push(itemStr);
             }
         }
-        // Check if it's purely alphabetic (single or multiple characters)
-        else if (/^[a-zA-Z]+$/.test(itemStr)) {
+         else if (/^[a-zA-Z]+$/.test(itemStr)) {
             alphabets.push(itemStr.toUpperCase());
-            // Store individual characters for concatenation (in original case)
-            for (let char of itemStr) {
+             for (let char of itemStr) {
                 alphabetChars.push(char);
             }
         }
-        // Otherwise it's a special character
-        else {
+         else {
             specialCharacters.push(itemStr);
         }
     });
