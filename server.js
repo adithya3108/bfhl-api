@@ -16,9 +16,10 @@ app.use(express.json({ limit: '10mb' }));
 const USER_DETAILS = {
     full_name: "p.r.adithya", // Replace with your name in lowercase (use underscore for spaces)
     date_of_birth: "31082004", // Replace with your DOB in ddmmyyyy format
-    email: "adithyapr3104@gmai.com", // Replace with your email
+    email: "adithya.pr2022@vitstudent.ac.in", // Replace with your email
     roll_number: "22brs1100" // Replace with your roll number
 };
+
 
 // Helper function to categorize and process data
 function processData(data) {
